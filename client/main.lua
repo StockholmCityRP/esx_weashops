@@ -35,6 +35,7 @@ function OpenBuyLicenseMenu (zone)
     'default', GetCurrentResourceName(), 'shop_license',
     {
       title = _U('buy_license'),
+	  align = 'bottom-right',
       elements = {
         { label = _U('yes') .. ' ($' .. Config.LicensePrice .. ')', value = 'yes' },
         { label = _U('no'), value = 'no' },
@@ -77,6 +78,7 @@ function OpenShopMenu(zone)
     'default', GetCurrentResourceName(), 'shop',
     {
       title  = _U('shop'),
+	  align  = 'bottom-right',
       elements = elements
     },
     function(data, menu)
