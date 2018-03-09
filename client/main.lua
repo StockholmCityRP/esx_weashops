@@ -116,9 +116,9 @@ Citizen.CreateThread(function()
   if v.legal==0 then
     for i = 1, #v.Pos, 1 do
     local blip = AddBlipForCoord(v.Pos[i].x, v.Pos[i].y, v.Pos[i].z)
-    SetBlipSprite (blip, 154)
+    SetBlipSprite (blip, 313)
     SetBlipDisplay(blip, 4)
-    SetBlipScale  (blip, 1.0)
+    SetBlipScale  (blip, 1.2)
     SetBlipColour (blip, 2)
     SetBlipAsShortRange(blip, true)
     BeginTextCommandSetBlipName("STRING")
@@ -132,7 +132,7 @@ end)
 -- Display markers
 Citizen.CreateThread(function()
   while true do
-    Wait(0)
+    Citizen.Wait(10)
     local coords = GetEntityCoords(GetPlayerPed(-1))
     for k,v in pairs(Config.Zones) do
       for i = 1, #v.Pos, 1 do
@@ -147,7 +147,7 @@ end)
 -- Enter / Exit marker events
 Citizen.CreateThread(function()
   while true do
-    Wait(0)
+    Citizen.Wait(10)
     local coords      = GetEntityCoords(GetPlayerPed(-1))
     local isInMarker  = false
     local currentZone = nil
@@ -176,7 +176,7 @@ end)
 -- Key Controls
 Citizen.CreateThread(function()
   while true do
-    Citizen.Wait(0)
+    Citizen.Wait(10)
     if CurrentAction ~= nil then
 
       SetTextComponentFormat('STRING')
