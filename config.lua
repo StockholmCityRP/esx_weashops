@@ -5,7 +5,7 @@ Config.Color          = { r = 0, g = 128, b = 255 }
 Config.Type           = 1
 Config.Locale         = 'sv'
 Config.EnableLicense  = true
-Config.LicensePrice   = 15000
+Config.LicensePrice   = 40000
 
 Config.Zones = {
 
@@ -30,7 +30,7 @@ Config.Zones = {
         legal = 1,
         Items = {},
         Pos   = {
-            { x = -1306.239,   y = -394.018,  z = 35.695 },
+            ---{ x = -1306.239,   y = -394.018,  z = 35.695 },
         }
     },
 
